@@ -15,13 +15,15 @@
   <body>
     <div class="container">
       <div class="card-white">
-        <h1> Hello! 👋🏼 Welcome to Bruna's Page</h1>
+        <h1> Olá! 👋🏼 I'm Bruna</h1>
         <img id="bruna_photo" class="circle-pic">
         <p>I am a full-stack developer and corporate strategy manager,
           currently undertaking <a href="https://www.lewagon.com/web-development-course" target="_blank">LeWagon's Web Development and AI Bootcamp</a></p>
         <p>📍 Living and working in London 🇬🇧. <br />Formerly: Dublin 🇮🇪, Lisbon 🇵🇹, Sao Paulo 🇧🇷</p>
         <p>🗣️ Fluent in English 🏴󠁧󠁢󠁥󠁮󠁧󠁿, Portuguese 🇵🇹, and Spanish 🇪🇸 </p>
-        </div>
+        <button id="dont_click" onclick="buttonClicked()">Test button, don't click.</button>
+        <div id="dont_click_text"></div>
+      </div>
       <div class="card-white">
         <p>Curious to learn more about Bruna? 🙃</p>
         <h2>Follow me:</h2>
@@ -43,6 +45,46 @@
     <div id="globeViz"></div>
 
     <script>
+      let clicks = 0
+      let text_area = document.getElementById("dont_click_text")
+      let messages = [
+        "Ouch! That hurt.",
+        "I told you not to click me.",
+        "I'm warning you...",
+        "I'm serious.",
+        "I'm not kidding.",
+        "Do you not respect my rights as a button?",
+        "You must have a lot of time on your hands.",
+        "How many of these do you think I wrote?",
+        "20?",
+        "100?",
+        "101?",
+        "102?",
+        "103?",
+        "104?",
+        "Hah, gotcha! I am not just counting up!",
+        "Am I AI?",
+        "Please click me again.",
+        "I see reverse-psychology doesn't work on you.",
+        "Fine.",
+        "I give up",
+        "Let's start again. How are you?",
+        "Nothing? Just more clicking.",
+        "How disappointing.",
+        "Time for me to go."
+      ]
+
+      buttonClicked = () => {
+        let message = messages[clicks] || "I've had enough."
+        text_area.innerText = message
+        clicks++;
+      }
+
+
+    </script>
+
+    <script>
+      // Copy and pasted from https://github.com/vasturiano/globe.gl/blob/master/example/random-arcs/index.html
       // Gen random data
       const N = 20;
       const arcsData = [...Array(N).keys()].map(() => ({
