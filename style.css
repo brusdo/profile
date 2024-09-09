@@ -64,6 +64,7 @@ a:hover {
   background-image: url('images/bruna.jpg');
   background-size: cover; /* Cover the entire area of the element */
   transition: background-image 0.5s ease-in-out; /* Smooth transition */
+  /* https://www.joshwcomeau.com/animation/css-transitions/ */
 }
 #bruna_photo:hover {
   background-image: url('images/drawBru.jpg'); /* Initial background image */
@@ -93,7 +94,7 @@ a:hover {
   height: 100%;
   position: absolute;
   top: 0px;
-  left:0px;
-  z-index: -5;
+  left: 0px;
+  z-index: -1;
   opacity: 0.5;
 }
