@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bruna's Page</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="//unpkg.com/globe.gl"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="container">
+      <div class="card-white">
+        <h1> Hello! 👋🏼 Welcome to Bruna's Page</h1>
+        <img id="bruna_photo" class="circle-pic">
+        <p>I am a full-stack developer and corporate strategy manager,
+          currently undertaking <a href="https://www.lewagon.com/web-development-course" target="_blank">LeWagon's Web Development and AI Bootcamp</a></p>
+      </div>
+      <div class="card-white">
+        <p>Curious to learn more about Bruna? 🙃</p>
+        <h2>Follow me:</h2>
+        <ul class="social_links">
+          <li>
+            <a href="https://www.linkedin.com/in/bruna-deoliveira/" target="_blank">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/brusdo" target="_blank">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="globeViz"></div>
+
+    <script>
+      // Gen random data
+      const N = 20;
+      const arcsData = [...Array(N).keys()].map(() => ({
+        startLat: (Math.random() - 0.5) * 180,
+        startLng: (Math.random() - 0.5) * 360,
+        endLat: (Math.random() - 0.5) * 180,
+        endLng: (Math.random() - 0.5) * 360,
+        color: [['red', 'white', 'blue', 'green'][Math.round(Math.random() * 3)], ['red', 'white', 'blue', 'green'][Math.round(Math.random() * 3)]]
+      }));
+
+      Globe()
+      .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
+      .arcsData(arcsData)
+      .arcColor('color')
+      .arcDashLength(() => Math.random())
+      .arcDashGap(() => Math.random())
+      .arcDashAnimateTime(() => Math.random() * 4000 + 500)
+      (document.getElementById('globeViz'))
+
+    </script>
+  </body>
+</html>

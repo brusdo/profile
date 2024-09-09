@@ -1,0 +1,98 @@
+body {
+  background-color: #8EACCD;
+  font-family: "Playfair Display";
+  font-size: 17px;
+  color: #1A4870;
+  line-height: 1.6;
+}
+
+
+@media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  .circle-pic {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .circle-pic {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .circle-pic {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+
+h1, h2 {
+  font-family: "Bebas Neue";
+  line-height: normal;
+}
+
+a {
+  color: #6C48C5;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.card-white {
+  text-align: center;
+  background-color: #D1E9F6CC;
+  padding: 20px;
+  border: 1px solid lightgrey;
+  margin: 20px 0;
+}
+
+#bruna_photo {
+  background-image: url('images/bruna.jpg');
+  background-size: cover; /* Cover the entire area of the element */
+  transition: background-image 0.5s ease-in-out; /* Smooth transition */
+}
+#bruna_photo:hover {
+  background-image: url('images/bruna-pointing.jpg'); /* Initial background image */
+
+}
+
+.circle-pic {
+  border-radius: 50%;
+  width: 200px;
+  height:200px;
+}
+
+.social_links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.social_links li {
+  display: inline;
+  padding: 0 10px;
+  font-size: 50px;
+}
+
+
+#globeViz {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left:0px;
+  z-index: -5;
+  opacity: 0.5;
+}
