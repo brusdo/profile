@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="//unpkg.com/globe.gl"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
@@ -41,8 +40,6 @@
         </ul>
       </div>
     </div>
-
-    <div id="globeViz"></div>
 
     <script>
       let clicks = 0
@@ -80,29 +77,6 @@
         clicks++;
       }
 
-
-    </script>
-
-    <script>
-      // Copy and pasted from https://github.com/vasturiano/globe.gl/blob/master/example/random-arcs/index.html
-      // Gen random data
-      const N = 20;
-      const arcsData = [...Array(N).keys()].map(() => ({
-        startLat: (Math.random() - 0.5) * 180,
-        startLng: (Math.random() - 0.5) * 360,
-        endLat: (Math.random() - 0.5) * 180,
-        endLng: (Math.random() - 0.5) * 360,
-        color: [['red', 'white', 'blue', 'green'][Math.round(Math.random() * 3)], ['red', 'white', 'blue', 'green'][Math.round(Math.random() * 3)]]
-      }));
-
-      Globe()
-      .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
-      .arcsData(arcsData)
-      .arcColor('color')
-      .arcDashLength(() => Math.random())
-      .arcDashGap(() => Math.random())
-      .arcDashAnimateTime(() => Math.random() * 4000 + 500)
-      (document.getElementById('globeViz'))
 
     </script>
   </body>

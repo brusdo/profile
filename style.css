@@ -1,9 +1,13 @@
+
+
 body {
-  background-color: #8EACCD;
   font-family: "Playfair Display";
   font-size: 17px;
   color: #1A4870;
   line-height: 1.6;
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  background-attachment: fixed;
 }
 
 
@@ -66,7 +70,7 @@ a:hover {
   transition: background-image 0.5s ease-in-out; /* Smooth transition */
   /* https://www.joshwcomeau.com/animation/css-transitions/ */
 }
-#bruna_photo:hover {
+div:hover #bruna_photo {
   background-image: url('images/drawBru.jpg'); /* Initial background image */
 
 }
@@ -86,15 +90,4 @@ a:hover {
   display: inline;
   padding: 0 10px;
   font-size: 50px;
-}
-
-
-#globeViz {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: -1;
-  opacity: 0.5;
 }
